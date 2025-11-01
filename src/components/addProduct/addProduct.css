@@ -1,0 +1,41 @@
+.addProduct-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.addProduct-form input {
+    border: none;
+    outline: none;
+    background: var(--white-50);
+    padding: 5px 25px 5px 0;
+    border-radius: 6px;
+}
+
+.addProduct-form input::placeholder {
+    font-size: .8rem;
+}
+
+.addProduct-form>div {
+    position: relative;
+}
+
+.addProduct-form>div .icn {
+    position: absolute;
+    top: 25%;
+    right: 4px;
+}
+
+.addProduct-form .submit-btn {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    background: var(--white);
+    border-radius: 6px;
+    height: 36.5px;
+    align-self: self-end;
+}
+
+.addProduct-form .submit-btn:hover {
+    color: var(--white);
+    background: var(--blue);
+    transition: all 600ms;
+}

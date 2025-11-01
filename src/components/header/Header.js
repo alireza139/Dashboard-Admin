@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../styles/header.css'
+import './header.css'
 import { CiBellOn } from "react-icons/ci";
 import { CiBrightnessUp } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -10,6 +10,7 @@ import { LuUsersRound } from "react-icons/lu";
 import { BsBagCheck } from "react-icons/bs";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 
 
@@ -59,40 +60,40 @@ export default function Header() {
                 <hr />
                 <ul className='sidebar-items mt-3'>
                     <li>
-                        <a href="#" className='w-100'>
+                        <Link to="/products" className='w-100'>
                             <IoHomeOutline className='ms-2' />
                             صفحه اصلی
-                        </a>
+                        </Link>
                     </li>
                     <li className='active'>
-                        <a href="#" className='w-100'>
+                        <Link to="/products" className='w-100'>
                             <MdOutlineProductionQuantityLimits className='ms-2' />
                             محصولات
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className='w-100'>
+                        <Link to="/comments" className='w-100'>
                             <MdOutlineComment className='ms-2' />
                             نظرات
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className='w-100'>
+                        <Link to="/users" className='w-100'>
                             <LuUsersRound className='ms-2' />
                             کاربران
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className='w-100'>
+                        <Link to="/orders" className='w-100'>
                             <BsBagCheck className='ms-2' />
                             سفارشات
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#" className='w-100'>
+                        <Link to="/offs" className='w-100'>
                             <MdOutlineLocalOffer className='ms-2' />
                             تخفیفات
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
