@@ -39,3 +39,24 @@
     background: var(--blue);
     transition: all 600ms;
 }
+
+/* تبلت و کوچکتر (<= 991px) */
+@media (max-width: 991.98px) {
+
+    .addProduct-form {
+        flex-direction: column;
+    }
+     .addProduct-form .submit-btn{
+        align-self: center;
+    }
+}
+
+/* موبایل افقی و کوچکتر (<= 767px) */
+@media (max-width: 767.98px) {
+      .addProduct-form {
+        flex-direction: column;
+    }
+    .addProduct-form .submit-btn{
+        align-self: center;
+    }
+}
