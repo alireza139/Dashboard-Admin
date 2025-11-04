@@ -3,7 +3,8 @@ import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/header/Header';
 import routes from './routes';
 import { useRoutes } from 'react-router-dom';
-
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 function App() {
   const router = useRoutes(routes)

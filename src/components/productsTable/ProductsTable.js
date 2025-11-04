@@ -5,12 +5,14 @@ import { MdDelete } from "react-icons/md";
 import { FaInfo } from "react-icons/fa6";
 import DeleteModal from '../modal/DeleteModal';
 import InfoModal from '../modal/InfoModal';
+import EditModal from '../modal/EditModal';
 
 
 
 export default function ProductsTable() {
     const [isShowDeleteModal, setIsShowDeleteModal] = useState(false)
     const [isShowInfoModal, setIsShowInfoModal] = useState(false)
+    const [isShowEditModal, setIsShowEditModal] = useState(false)
     const yesFunc = () => {
         console.log("yes");
         setIsShowDeleteModal(false)
@@ -18,6 +20,11 @@ export default function ProductsTable() {
     const noFunc = () => {
         console.log("no");
         setIsShowDeleteModal(false)
+    }
+    const closeFunc = () => {
+        console.log("close");
+        setIsShowInfoModal(false)
+        setIsShowEditModal(false)
     }
     return (
         <>
@@ -39,7 +46,7 @@ export default function ProductsTable() {
                         <td>32</td>
                         <td>
                             <div className='d-flex justify-content-around acts-box'>
-                                <MdEdit />
+                                <MdEdit onClick={() => setIsShowEditModal(true)} />
                                 <MdDelete onClick={() => setIsShowDeleteModal(true)} />
                                 <FaInfo onClick={() => setIsShowInfoModal(true)} />
                             </div>
@@ -52,7 +59,7 @@ export default function ProductsTable() {
                         <td>32</td>
                         <td>
                             <div className='d-flex justify-content-around acts-box'>
-                                <MdEdit />
+                                <MdEdit onClick={() => setIsShowEditModal(true)} />
                                 <MdDelete onClick={() => setIsShowDeleteModal(true)} />
                                 <FaInfo onClick={() => setIsShowInfoModal(true)} />
                             </div>
@@ -66,7 +73,10 @@ export default function ProductsTable() {
                 isShowDeleteModal && <DeleteModal yes={yesFunc} no={noFunc} />
             }
             {
-                isShowInfoModal && <InfoModal />
+                isShowInfoModal && <InfoModal close={closeFunc} />
+            }
+            {
+                isShowEditModal && <EditModal close={closeFunc}/>
             }
         </>
     )

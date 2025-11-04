@@ -15,12 +15,20 @@
 
 .modal-box {
     display: flex;
-    /* flex-direction: column;
-    justify-content: space-around; */
-    /* align-items: center; */
     padding: 0.5rem;
     background: var(--white);
     border-radius: 6px;
+}
+
+
+
+/* Start Delete Modal styles */
+.delete-modal-box {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 18rem;
+    height: 6rem;
 }
 
 .modal-btns {
@@ -38,12 +46,26 @@
     border-radius: 6px;
 }
 
-/* Info Modal */
+
+
+
+/* Start Info Modal styles */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
 .info-modal-box {
     width: 90%;
     height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 
 .title-info {
@@ -52,21 +74,109 @@
 }
 
 .product-info {
-    width: max-content; 
+    width: max-content;
 }
 
 .product-info-item {
     border-bottom: 2px solid rgba(184, 184, 184, 0.3);
     padding: 6px 0;
 }
-.product-info-image{
-    width: 14rem;
-    height: 14rem;
+
+.product-image {
+    width: 16rem;
+    height: 16rem;
     margin-bottom: 1rem;
 }
-.product-popularity{
+
+.product-parent-popularity {
     width: 100%;
     height: 1.5rem;
     background: rgb(213, 213, 213);
     border-radius: 8px;
+    direction: ltr;
+}
+
+.product-popularity {
+    height: 100%;
+    width: 50%;
+    background: var(--blue);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: rgb(213, 213, 213);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-info-modal-box {
+    display: none;
+}
+
+/* Start Edit Modal styles */
+.edit-modal-box {
+    width: 80%;
+    height: 80vh;
+}
+.edit-form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* تبلت و کوچکتر (<= 991px) */
+@media (max-width: 991.98px) {
+    .info-modal-box {
+        width: 70%;
+        height: 70vh;
+    }
+
+    .info-modal-box-content {
+        flex-direction: column;
+    }
+
+    .product-info {
+        width: 60%;
+    }
+
+    .product-info-image {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .desctop-info-modal-box {
+        display: none;
+    }
+
+    .mobile-info-modal-box {
+        display: flex;
+    }
+}
+
+/* موبایل افقی و کوچکتر (<= 767px) */
+@media (max-width: 767.98px) {
+    .info-modal-box {
+        width: 90%;
+        height: 85vh;
+    }
+
+    .info-modal-box-content {
+        flex-direction: column;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .product-info-image {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .desctop-info-modal-box {
+        display: none;
+    }
+
+    .mobile-info-modal-box {
+        display: flex;
+    }
 }

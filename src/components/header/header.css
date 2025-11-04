@@ -81,12 +81,16 @@
 /* تبلت و کوچکتر (<= 991px) */
 @media (max-width: 991.98px) {
 
-    .header-search-box{
+    .header-search-box {
         display: none;
     }
 
     .offcanv {
         display: none;
+    }
+
+    .search-box {
+        width: 260px;
     }
 }
 

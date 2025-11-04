@@ -13,7 +13,7 @@ import './chart.css'
 
 export default function Chart({ title, data, datakey, grid }) {
     return (
-        <div className='chartm pt-3' >
+        <div className='chartm' >
             <h5>{title}</h5>
             <ResponsiveContainer width="100%">
                 <LineChart data={data}>
