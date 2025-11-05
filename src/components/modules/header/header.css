@@ -1,0 +1,132 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background: var(--white-50);
+    z-index: 999;
+}
+
+.right-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.offcanv-profile {
+    display: flex;
+    align-items: center;
+}
+
+.right-header img,
+.offcanv-profile img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.search-box {
+    width: 300px;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 8px 8px 8px;
+    border-radius: 6px;
+}
+
+.search-box button {
+    position: absolute;
+    left: 0;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.icons-box * {
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 5px;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+.offcanv {
+    display: none;
+}
+
+.close-icon {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.show-offcanv {
+    right: 0;
+    transition: all 1s;
+}
+
+.hide-offcanv {
+    right: -500px;
+    transition: all 1s;
+}
+
+/* تبلت و کوچکتر (<= 991px) */
+@media (max-width: 991.98px) {
+
+    .header-search-box {
+        display: none;
+    }
+
+    .offcanv {
+        display: none;
+    }
+
+    .search-box {
+        width: 260px;
+    }
+}
+
+/* موبایل افقی و کوچکتر (<= 767px) */
+@media (max-width: 767.98px) {
+
+    .header-search-box {
+        display: flex;
+        width: 200px;
+    }
+
+    .header-profile {
+        display: none;
+    }
+
+    .hamburgerMenu {
+        display: block;
+        font-size: 2rem;
+        color: var(--blue);
+    }
+
+    .offcanv {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--blue);
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+}

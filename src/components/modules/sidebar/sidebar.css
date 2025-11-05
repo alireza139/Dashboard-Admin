@@ -1,0 +1,70 @@
+.sidebar {
+    background-color: var(--blue);
+    height: 100vh;
+    width: 25%;
+    position: sticky;
+}
+
+.sidebar-title {
+    color: var(--white);
+    font-size: 1.4rem;
+    padding: 14px;
+}
+
+.sidebar-header {
+    border-bottom: solid 2px #6c48bb;
+
+}
+
+.sidebar-items li {
+    padding: 10px 12px;
+}
+
+.sidebar-items li a {
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.active {
+    background: #391588;
+    padding: 0.5rem 0;
+    padding-right: 6px;
+    transition: background 800ms ease, padding-right 800ms ease;
+
+}
+
+.close-icon {
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-sidebar {
+    display: none;
+    visibility: hidden;
+}
+
+.sidebar-search-box {
+    display: none;
+}
+
+/* تبلت و کوچکتر (<= 991px) */
+@media (max-width: 991.98px) {
+    .sidebar {
+        width: 40%;
+    }
+
+    .sidebar-search-box {
+        display: block;
+    }
+}
+
+/* موبایل افقی و کوچکتر (<= 767px) */
+@media (max-width: 767.98px) {
+    .sidebar {
+        display: none;
+    }
+}
