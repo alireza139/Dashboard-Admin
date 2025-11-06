@@ -10,13 +10,13 @@ export default function LatestTransAction() {
 
     return (
         <div className='latestTransActionBox w-100 mt-3 mt-md-0 me-md-3'>
-            <h5>Latest TransAction:</h5>
+            <h5 className='mb-3'>آخرین سفارشات:</h5>
             <table className='latestTransActionTable w-100'>
                 <tr>
-                    <th>Customer</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th className='hidden-in-mobile'>Status</th>
+                    <th>مشتری</th>
+                    <th>تاریخ</th>
+                    <th>مبلغ</th>
+                    <th className='hidden-in-mobile'>وضعیت</th>
                 </tr>
                 {
                     transActions.map(item => (

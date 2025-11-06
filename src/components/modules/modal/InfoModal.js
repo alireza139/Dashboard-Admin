@@ -85,7 +85,7 @@ export default function InfoModal({ close }) {
                             </div>
                         </div>
                     </div>
-                    <Chart grid title="نمودار فروش محصول:" data={sellsInfo} datakey="sale"></Chart>
+                    <Chart grid title="نمودار فروش محصول:" data={sellsInfo} datakey="sale" bootClsaa='w-50'></Chart>
                 </div>
             </div>
             {/*End Info Modal for Desctop */}

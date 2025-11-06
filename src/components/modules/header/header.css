@@ -6,7 +6,7 @@
     position: sticky;
     top: 0;
     background: var(--white-50);
-    z-index: 999;
+    z-index: 2;
 }
 
 .right-header {

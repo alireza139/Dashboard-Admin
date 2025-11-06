@@ -33,7 +33,6 @@ export default function ProductsTable() {
                     <tr>
                         <th>تصویر</th>
                         <th>محصول</th>
-                        <th>قیمت</th>
                         <th>تعداد</th>
                         <th>عملیات</th>
                     </tr>
@@ -42,7 +41,6 @@ export default function ProductsTable() {
                     <tr>
                         <td><img src="./img/oil.jpeg" alt="product image" className='product-img' /></td>
                         <td>روغن سرخ کردنی</td>
-                        <td style={{ direction: "ltr" }}>120000</td>
                         <td>32</td>
                         <td>
                             <div className='d-flex justify-content-around acts-box'>
@@ -55,7 +53,6 @@ export default function ProductsTable() {
                     <tr>
                         <td><img src="./img/oil.jpeg" alt="product image" className='product-img' /></td>
                         <td>روغن سرخ کردنی</td>
-                        <td style={{ direction: "ltr" }}>120000</td>
                         <td>32</td>
                         <td>
                             <div className='d-flex justify-content-around acts-box'>

@@ -10,7 +10,7 @@ import { LuUsersRound } from "react-icons/lu";
 import { BsBagCheck } from "react-icons/bs";
 import { MdOutlineLocalOffer } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -27,7 +27,7 @@ export default function Header() {
             <div className='header pt-2 px-2'>
                 <GiHamburgerMenu className='hamburgerMenu' onClick={hamburgerMenuHandler} />
                 <div className="right-header header-profile">
-                    <img src="./logo192.png" alt="avatar" />
+                    <img src="./img/yolme.jpg" alt="avatar" />
                     <div className="admin-info me-1">
                         <h1 className="admin-name fs-4">علیرضا حسینی</h1>
                         <h3 className="admin">توسعه دهنده</h3>
@@ -60,40 +60,45 @@ export default function Header() {
                 <hr />
                 <ul className='sidebar-items mt-3'>
                     <li>
-                        <Link to="/" className='w-100'>
+                        <NavLink to="/home" className={({ isActive }) => (isActive ? "active w-100" : "w-100")}>
                             <IoHomeOutline className='ms-2' />
                             صفحه اصلی
-                        </Link>
+                        </NavLink>
                     </li>
-                    <li className='active'>
-                        <Link to="/products" className='w-100'>
+
+                    <li>
+                        <NavLink to="/products" className={({ isActive }) => (isActive ? "active w-100" : "w-100")}>
                             <MdOutlineProductionQuantityLimits className='ms-2' />
                             محصولات
-                        </Link>
+                        </NavLink>
                     </li>
+
                     <li>
-                        <Link to="/comments" className='w-100'>
+                        <NavLink to="/comments" className={({ isActive }) => (isActive ? "active w-100" : "w-100")}>
                             <MdOutlineComment className='ms-2' />
                             نظرات
-                        </Link>
+                        </NavLink>
                     </li>
+
                     <li>
-                        <Link to="/users" className='w-100'>
+                        <NavLink to="/users" className={({ isActive }) => (isActive ? "active w-100" : "w-100")}>
                             <LuUsersRound className='ms-2' />
                             کاربران
-                        </Link>
+                        </NavLink>
                     </li>
+
                     <li>
-                        <Link to="/orders" className='w-100'>
+                        <NavLink to="/orders" className={({ isActive }) => (isActive ? "active w-100" : "w-100")}>
                             <BsBagCheck className='ms-2' />
                             سفارشات
-                        </Link>
+                        </NavLink>
                     </li>
+
                     <li>
-                        <Link to="/offs" className='w-100'>
+                        <NavLink to="/offs" className={({ isActive }) => (isActive ? "active w-100" : "w-100")}>
                             <MdOutlineLocalOffer className='ms-2' />
                             تخفیفات
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

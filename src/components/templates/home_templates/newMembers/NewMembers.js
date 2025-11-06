@@ -6,7 +6,7 @@ import { newMembers } from '../../../../CmsDB';
 export default function NewMembers() {
     return (
         <div className='newMemberList px-2'>
-            <h5>New Members:</h5>
+            <h5 className='mb-3'>کاربران جدید:</h5>
             <ul className='p-0'>
                 {
                     newMembers.map(newMember =>
